@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikachu api and json</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon Viewer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="app">
+    <h2>Pokémon Viewer</h2>
+    <p>Try names like Pikachu, Charmander, Eevee, Mewtwo, etc.</p>
 
-    <h2>type the following pokomons and see them😀</h2>
-    <p>
-        1.Bulbasaur: A Grass/Poison starter.</br>
-        2.Charmander: A Fire starter.</br>
-        3.Squirtle: A Water starter.</br>
-        4.Pikachu: The iconic Electric mouse.</br>
-        5.Eevee: Known for its various evolutions.</br>
-        6.Mewtwo: A powerful Psychic legendary.</br>
-        7.Chikorita: A Grass starter.</br>
-        8.Cyndaquil: A Fire starter.</br>
-        9.Totodile: A Water starter.</br>
-        10.Lugia: A Psychic/Flying legendary.</br>
-        11.Ho-Oh: A Fire/Flying legendary.</br>
-        12.Treecko: A Grass starter.</br>
-        13.Torchic: A Fire starter.</br>
-        14.Mudkip: A Water starter.</br>
-        15.Rayquaza: A Dragon/Flying legendary.</br>
-        16.Deoxys: Another Psychic legendary.</br>
-        17.Turtwig: A Grass starter.</br>
-        18.Chimchar: A Fire starter.</br>
-        19.Piplup: A Water starter.</br>
-        20.Dialga: A Steel/Dragon legendary.</br>
-    </p>
-    
-    <input type="text" id="pokemonName" placeholder="Enter Pokomon Name">
-    <button onclick="fetchData()">Fetch Pokomon</button><br>
+    <div class="input-group">
+      <input type="text" id="pokemonName" placeholder="Enter Pokémon Name"/>
+      <button id="searchBtn">Search</button>
+      <button id="randomBtn">🎲 Random</button>
+    </div>
 
-    <img src="" alt="pokomonSprite" id="pokomonSprite" style="display: none;">
+    <div id="result" class="card hidden">
+      <img id="pokemonSprite" alt="Pokémon Sprite" />
+      <h3 id="pokemonTitle"></h3>
+      <p id="pokemonDescription" class="description"></p>
+      <div class="details">
+        <p><strong>ID:</strong> <span id="pokemonId"></span></p>
+        <p><strong>Height:</strong> <span id="pokemonHeight"></span></p>
+        <p><strong>Weight:</strong> <span id="pokemonWeight"></span></p>
+        <p><strong>Type(s):</strong> <span id="pokemonTypes"></span></p>
+      </div>
+    </div>
+  </div>
 
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
